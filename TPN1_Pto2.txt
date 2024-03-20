@@ -1,0 +1,17 @@
+2)
+A-Encontre Chrome y Firefox
+B-Seleccione las pestaña de internet
+3)
+A-Se observan los procesos ejecutados en tiempo real
+B-Se observan los recursos utilizados y sus caracteristicas
+C-Se observa la estructura organizativa que se utiliza para almacenar y organizar los datos en un disco duro u otro dispositivo de almacenamiento
+4)Usar Terminar proceso intenta cerrar el proceso adecuadamente, dándole tiempo para guardar archivos, etc, mientas que Matar fuerza a que se cierre de inmediato.
+5)
+La opción -l nos permite listar los ficheros en formato de una sola columna, listando un fichero por cada línea con la siguiente información: permisos del fichero, el número de enlace, nombre del propietario, nombre del grupo al que pertenece, tamaño en bytes, una marca de tiempo y nombre del fichero
+La diferencia con el paso anterior es que nos encontramos en la carpeta Documentos
+
+El editor de textos nano nos permite crear nuevos archivos de texto o editar los existentes directamente desde la terminal y sin la necesidad de tener que instalar un editor de textos gráfico
+6)
+htop es un visualizador de procesos para Linux muy similar al comando top, pero mucho más interactivo y visual. htop es una herramienta sumamente útil para monitorizar su sistema en tiempo real, además permite desplazarse vertical y horizontalmente, pudiendo reiniciar y matar procesos sin necesidad de usar sus identificadores (PIDs
+7)ifconfig (configuración de interfaz) es una herramienta de gestión de red. Se utiliza para configurar y ver el estado de las interfaces de red en los sistemas operativos Linux. Con ifconfig, puede asignar direcciones IP, habilitar o deshabilitar interfaces, administrar la caché ARP, rutas y más
+
