@@ -1,0 +1,40 @@
+TP2-Leal Nicolas 
+
+
+1)Las llamadas al sistema son interfaces que permiten a los programas solicitar servicios al núcleo del sistema operativo. Estos servicios incluyen acciones como leer/escribir archivos, gestionar procesos, o acceder a recursos protegidos. Son fundamentales para que los programas interactúen con el sistema operativo de forma segura y controlada.
+La función principal de las llamadas al sistema en una computadora es permitir que los programas de usuario soliciten servicios o acciones al núcleo del sistema operativo. Estos servicios incluyen operaciones como acceso a archivos, gestión de procesos, comunicación entre procesos, asignación de memoria, manejo de dispositivos de entrada/salida, y otros. En resumen, las llamadas al sistema actúan como una interfaz entre los programas de usuario y el núcleo del sistema operativo, facilitando la interacción segura y controlada con los recursos del sistema.
+
+Los usuarios tienen acceso a un conjunto limitado de llamadas al sistema que les permiten interactuar con el sistema operativo de manera controlada y segura. Estas llamadas proporcionan funcionalidades como gestión de archivos, creación y destrucción de procesos, asignación de memoria, etc. Sin embargo, el acceso puede estar restringido por razones de seguridad y protección del sistema.
+
+
+2)El estándar POSIX (Portable Operating System Interface) es un conjunto de estándares desarrollado por el IEEE para promover la portabilidad de aplicaciones entre sistemas operativos UNIX y asegurar la interoperabilidad entre ellos. Define interfaces comunes para funciones del sistema operativo, facilitando la escritura de código que funcione en diferentes sistemas UNIX sin modificaciones significativas. Esto promueve la portabilidad y la interoperabilidad entre sistemas UNIX.
+a)La creación del estándar POSIX surgió de la necesidad de establecer interfaces comunes entre los sistemas operativos UNIX para mejorar la portabilidad y la interoperabilidad de las aplicaciones. Antes de POSIX, cada sistema operativo UNIX tenía su propia implementación, lo que dificultaba el desarrollo de software portátil. POSIX estableció un conjunto de estándares para garantizar la consistencia y facilitar el desarrollo de aplicaciones que puedan ejecutarse en múltiples plataformas UNIX sin modificaciones significativas. Esto impulsó la interoperabilidad, simplificó el desarrollo de software y promovió la adopción de estándares comunes en la comunidad de desarrollo de sistemas operativos UNIX.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3)
+strace: La herramienta strace muestra las llamadas al sistema realizadas por la aplicación y sus detalles.
+-o <archivo>: Especifica un archivo de salida donde se guardarán los resultados del seguimiento en lugar de mostrarlos en la salida estándar.
+-e <evento>: Permite filtrar las llamadas al sistema que se registrarán. Por ejemplo, -e open solo registrará llamadas al sistema open(), -e trace=file rastreará todas las llamadas relacionadas con archivos, etc.
+-p <PID>: Realiza el seguimiento de un proceso existente en lugar de iniciar uno nuevo. Especifique el ID de proceso (PID) del proceso que se va a rastrear.
+-s <tamaño>: Limita el tamaño de las cadenas de texto que se mostrarán en la salida
+
+
+4)
+ps: . El comando te muestra una lista con todos los procesos que se estén ejecutando en el sistema en ese momento. “ps” significa “Process Status”
