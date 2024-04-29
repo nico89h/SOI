@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <unistd.h>
+#include <time.h>
+
+#define NUM_HILOS 5
+
+// Función que será ejecutada por cada hilo
+void *funcion_hilo(void *arg) {
+    pid_t pid_hilo = getpid(); // Obtenemos el PID del hilo
+    printf("Soy un hilo con PID: %d\n", pid_hilo);
+
+    // Generamos un valor aleatorio entre 60 y 120 segundos para el tiempo activo del hilo
+    int tiempo_activo = 60 + rand() % 61;
+    printf("Hilo %d activo durante %d segundos\n", pid_hilo, tiempo_activo);
+    sleep(tiempo_activo); // El hilo se duerme durante tiempo_activo segundos
+
+    printf("Hilo %d finalizado\n", pid_hilo);
+    pthread_exit(NULL); // Salimos del hilo
+}
+
+int main() {
+    pid_t pid_proceso = getpid(); // Obtenemos el PID del proceso principal
+    printf("Soy el proceso principal con PID: %d\n", pid_proceso);
+
+    // Semilla para generar números aleatorios basados en el tiempo actual
+    srand(time(NULL));
+
+    pthread_t hilos[NUM_HILOS]; // Arreglo para almacenar los identificadores de los hilos
+    int i;
+    for (i = 0; i < NUM_HILOS; i++) {
+        // Creamos cada hilo y ejecutamos la función 'funcion_hilo'
+        if (pthread_create(&hilos[i], NULL, funcion_hilo, NULL) != 0) {
+            fprintf(stderr, "Error al crear el hilo %d\n", i);
+            exit(EXIT_FAILURE); // Salimos del programa con un código de error si falla la creación del hilo
+        }
+    }
+
+    // Esperamos a que todos los hilos terminen su ejecución
+    for (i = 0; i < NUM_HILOS; i++) {
+        pthread_join(hilos[i], NULL); // Esperamos a que el hilo 'i' termine su ejecución
+    }
+
+    return 0;
+}
+//codigo creado por chatgpt
